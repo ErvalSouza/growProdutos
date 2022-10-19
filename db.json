@@ -1,0 +1,24 @@
+{
+  "produtos": [
+    {
+      "nome": "Paracetamol",
+      "quantidade": 1,
+      "preco": "R$10",
+      "dataValidade": "29/10/2022",
+      "id": 1
+    },
+    {
+      "nome": "Dipirona",
+      "quantidade": 11,
+      "preco": "R$11",
+      "dataValidade": "11/11/2023",
+      "id": 2
+    }
+  ],
+  "usuarioCadastrado": [
+    {
+      "email": "ervalsouza20@gmail.com",
+      "senha": "123"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<div class="container shadow p-3 mb-5 mt-4 bg-white rounded">
+  <h3 class="container mb-4">Cadastre novo Produto</h3>
+
+  <form class="form-group container">
+    <div class="mb-3">
+      <label>Nome do Produto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Coloque o nome do Produto"
+        name="nome"
+        [(ngModel)]="produto.nome"
+      />
+    </div>
+    <div class="mb-3">
+      <label>Data de validade Produto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Coloque a data de validade do Produto"
+        name="dataValidade"
+        mask="00/00/0000"
+        [(ngModel)]="produto.dataValidade"
+
+      />
+    </div>
+    <div class="mb-3">
+      <label>Preço do Produto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Coloque o preço do Produto"
+        name="preco"
+        prefix="R$" mask="separator" thousandSeparator=","
+        [(ngModel)]="produto.preco"
+
+      />
+    </div>
+    <div class="mb-3">
+      <label>Quantidade</label>
+      <input
+        type="number"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Coloque a quantidade de Produto"
+        name="quantidade"
+        [(ngModel)]="produto.quantidade"
+
+      />
+    </div>
+  </form>
+  <button type="button" class="btn btn-primary button" (click)="criarProduto()">Cadastrar</button>
+  <button type="button" class="btn btn-warning" (click)="cancelar()">Cancelar</button>
+</div>
