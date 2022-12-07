@@ -1,0 +1,99 @@
+
+
+<div class="container shadow p-4 mb-5 mt-5 bg-white rounded row " >
+
+  <h5 class="mt-4 text-center">CADASTRE-SE</h5>
+
+     <div class="col-4 container">
+
+       <form class="mt-5" #novoUsuarioForm="ngForm">
+
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control mb-3"
+            id="nomeCompleto"
+            aria-describedby="nomeCompletoHelp"
+            placeholder="nomeCompleto"
+            [(ngModel)]="novoUsuario.nomeCompleto"
+            name="nomeCompleto"
+            [class.is-invalid]="formNomeCompleto.invalid && formNomeCompleto.touched"
+            #formNomeCompleto = "ngModel"
+            required
+          />
+        </div>
+        <!-- Validação -->
+        <div class="alert alert-danger" *ngIf="formNomeCompleto.invalid && formNomeCompleto.touched">
+          <p>O Nome Completo é Obrigatorio</p>
+        </div>
+        <!-- Validação -->
+
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control mb-3"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="email"
+            [(ngModel)]="novoUsuario.email"
+            name="email"
+            [class.is-invalid]="formEmail.invalid && formEmail.touched"
+            #formEmail="ngModel"
+            required
+          />
+        </div>
+        <!-- Validação -->
+        <div class="alert alert-danger" *ngIf="formEmail.invalid && formEmail.touched">
+          <p>O Email é Obrigatorio</p>
+        </div>
+        <!-- Validação -->
+
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control mb-3"
+            id="senha"
+            [(ngModel)] ="novoUsuario.senha"
+            name="senha"
+            placeholder="Password"
+            [class.is-invalid]="formSenha.invalid && formSenha.touched"
+            #formSenha="ngModel"
+            required
+          />
+        </div>
+        <!-- Validação -->
+        <div class="alert alert-danger" *ngIf="formSenha.invalid && formSenha.touched">
+          <p>A Senha é Obrigatória</p>
+        </div>
+        <!-- Validação -->
+
+        <div class="form-group">
+
+          <div class="checkbox">
+            <label for="termos" class="checkbox-inline">
+          <input type="checkbox" [(ngModel)]="novoUsuario.termos"
+          name="termos"
+          id="termos"
+          required
+          #formTermos="ngModel"
+          > Aceito os Termos
+        </label>
+          </div>
+        </div>
+
+         <!-- Validação -->
+         <div class="alert alert-danger" *ngIf="formTermos.invalid && formTermos.touched">
+          <p>É preciso aceitar os termos </p>
+        </div>
+        <!-- Validação -->
+
+        <button type="submit" id="butao" class="btn btn-primary" [disabled]="novoUsuarioForm.invalid " (click)="cadastrar()">
+          Cadastrar
+        </button>
+        <button type="submit" class="btn btn-warning " (click)="cancelar()">
+          Voltar
+        </button>
+           </form>
+     </div>
+
+

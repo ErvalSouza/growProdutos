@@ -20,6 +20,7 @@ import { ProdutoVencerComponent } from './components/produto-vencer/produto-venc
 
 import { NgxMaskModule } from 'ngx-mask';
 import { LoginComponent } from './components/login/login.component';
+import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginComponent } from './components/login/login.component';
     ProdutoEditarComponent,
     ProdutoExcluirComponent,
     ProdutoVencerComponent,
-    LoginComponent
+    LoginComponent,
+    CadastrarComponent,
   ],
   imports: [
     BrowserModule,

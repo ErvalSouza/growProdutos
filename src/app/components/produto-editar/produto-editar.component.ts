@@ -12,6 +12,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 export class ProdutoEditarComponent implements OnInit {
 
   produto!:Produto
+
   constructor(private produtoService:ProdutoService,
     private router: Router,
     private route:ActivatedRoute,

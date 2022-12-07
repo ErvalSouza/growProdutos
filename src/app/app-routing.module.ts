@@ -1,3 +1,4 @@
+import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { AuthGuardsService } from './guards/auth-guards.service';
 import { LoginComponent } from './components/login/login.component';
 import { ProdutoExcluirComponent } from './components/produto-excluir/produto-excluir.component';
@@ -10,8 +11,9 @@ import { RouterModule, Routes} from "@angular/router";
 
 const routes: Routes = [
 {path: "", component:HomeComponent},
-{path: "produtos", component:ProdutosComponent, canActivate:[AuthGuardsService]},
 {path: "login", component:LoginComponent},
+{path: "cadastrar", component:CadastrarComponent},
+{path: "produtos", component:ProdutosComponent, canActivate:[AuthGuardsService]},
 {path: "produtos/criar", component:ProdutosCriarComponent, canActivate:[AuthGuardsService]},
 {path: "produtos/editar/:id", component:ProdutoEditarComponent, canActivate:[AuthGuardsService]},
 {path: "produtos/excluir/:id", component:ProdutoExcluirComponent, canActivate:[AuthGuardsService]},

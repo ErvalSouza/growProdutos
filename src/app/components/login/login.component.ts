@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { AutenticacaoService } from './../../services/autenticacao.service';
 import { Component, OnInit } from '@angular/core';
 import { UsuarioCadastrado } from 'src/app/UsuarioCadastrado.Interface';
+import { MensagemService } from 'src/app/services/mensagem.service';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +16,18 @@ export class LoginComponent implements OnInit {
     senha:""
   }
 
-  constructor(private autenticacaoService:AutenticacaoService, private router:Router) { }
+  constructor(
+    private autenticacaoService:AutenticacaoService,
+    private router:Router,
+    private mensagem: MensagemService,
+    ) { }
 
   ngOnInit(): void {
   }
 
 
   fazerLogin(){
+
 this.autenticacaoService.fazerLogin(this.usuarioCadastrado)
 
 this.router.navigate(['produtos'])
