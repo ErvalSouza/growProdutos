@@ -11,6 +11,11 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 })
 export class ProdutoEditarComponent implements OnInit {
 
+  data = new Date
+dia = this.data.getDate()
+mes = this.data.getMonth() +1
+ano = this.data.getFullYear()
+
   produto!:Produto
 
   constructor(private produtoService:ProdutoService,
@@ -27,6 +32,11 @@ this.produtoService.getById(id!).subscribe((produto)=>{
   }
 
   atualizarProduto(): void{
+if(this.produto.dataValidade.length < 10){
+  this.mensagemService.add(`Preencha o campo de validade corretamente ex: ${this.dia}/${this.mes}/${this.ano}`)
+  return;
+}
+
 this.produtoService.atualizar(this.produto).subscribe(()=>{
 this.mensagemService.add("Produto Atualizado com Sucesso")
 this.router.navigate(['produtos'])

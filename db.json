@@ -1,34 +1,5 @@
 {
-  "produtos": [
-    {
-      "nome": "Dipirona",
-      "quantidade": 11,
-      "preco": "R$11",
-      "dataValidade": "11/11/2023",
-      "id": 2
-    },
-    {
-      "nome": "Dipirona",
-      "quantidade": 1,
-      "preco": "R$1",
-      "dataValidade": "29/10/2022",
-      "id": 3
-    },
-    {
-      "nome": "Amoxicilina",
-      "quantidade": 10,
-      "preco": "R$25",
-      "dataValidade": "10/10/2024",
-      "id": 4
-    },
-    {
-      "nome": "teste",
-      "quantidade": 1,
-      "preco": "R$1",
-      "dataValidade": "20/02/2027",
-      "id": 5
-    }
-  ],
+  "produtos": [],
   "UsuariosCadastrados": [
     {
       "id": 1,

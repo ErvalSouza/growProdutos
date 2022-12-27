@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarComponent implements OnInit {
 
+
   novoUsuario: NovoUsuario = {
     id: "",
     nomeCompleto: "",
@@ -25,6 +26,7 @@ export class CadastrarComponent implements OnInit {
     ) { }
   ngOnInit(): void {
   }
+
 
 
   cadastrar(){
