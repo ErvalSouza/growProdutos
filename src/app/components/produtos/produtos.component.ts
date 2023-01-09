@@ -12,17 +12,29 @@ export class ProdutosComponent implements OnInit {
   produtos:Produto[] = []
 
 
+  data = new Date
+dia = this.data.getDate()
+mes = this.data.getMonth() +1
+ano = this.data.getFullYear()
+
+
+
+
+
+
 
   constructor(private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
     this.getProdutos()
 
+
   }
 
 getProdutos(){
   this.produtoService.get().subscribe((produtos)=>{
 this.produtos=produtos
+
   })
 }
 

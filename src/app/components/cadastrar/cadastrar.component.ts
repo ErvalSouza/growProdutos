@@ -4,6 +4,8 @@ import {  UsuarioCadastrarService } from 'src/app/services/UsuarioCadastrar.serv
 import { NovoUsuario } from '../../NovoUsuario.Interface';
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.component.html',

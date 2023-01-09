@@ -22,6 +22,7 @@ return this.http.get<Produto[]>(this.baseUrl)
 }
 
 
+
 getById(id:string):Observable <Produto>{
   const url = `${this.baseUrl}/${id}`
 return this.http.get<Produto>(url)

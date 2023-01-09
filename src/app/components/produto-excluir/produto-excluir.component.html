@@ -14,19 +14,52 @@
         [value]="produto.nome"
       />
     </div>
-    <div class="mb-3">
-      <label>Data de validade Produto</label>
-      <input
+
+<div class="row">
+  <label>Data de validade Produto</label>
+
+    <div class="col">
+      <label>Dia</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Coloque a data de validade do Produto"
+          name="dataValidade"
+          disabled
+          [value]="produto.dia"
+
+        />
+      </div>
+      <div class="col">
+        <label>Mes</label>
+        <input
         type="text"
         class="form-control"
         id="exampleFormControlInput1"
         placeholder="Coloque a data de validade do Produto"
         name="dataValidade"
         disabled
-        [value]="produto.dataValidade"
+        [value]="produto.mes"
 
       />
     </div>
+
+    <div class="col">
+      <label>Ano</label>
+      <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Coloque a data de validade do Produto"
+      name="dataValidade"
+      disabled
+      [value]="produto.ano"
+
+    />
+      </div>
+</div>
+
     <div class="mb-3">
       <label>Preço do Produto</label>
       <input

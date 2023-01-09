@@ -15,6 +15,8 @@ dia = this.data.getDate()
 mes = this.data.getMonth() +1
 ano = this.data.getFullYear()
 
+
+
 @Input() classe = ""
 
 
@@ -23,7 +25,10 @@ ano = this.data.getFullYear()
     nome: "",
     quantidade: "",
     preco: "",
-    dataValidade:""
+    dia: 0,
+    mes: 0,
+    ano: 0,
+    // dataValidade:""
   }
 
   constructor(private produtoService: ProdutoService,private mensagemService: MensagemService, private router: Router) { }
@@ -32,11 +37,14 @@ ano = this.data.getFullYear()
 
   }
 
+
   criarProduto(): void {
-    if(this.produto.dataValidade.length < 10){
-      this.mensagemService.add(`Preencha o campo de validade corretamente ex: ${this.dia}/${this.mes}/${this.ano}`)
-      return;
+    if( this.produto.ano < this.ano){
+    this.mensagemService.add("O ano não pode ser inferior ao ano atual")
+    return
     }
+
+
 this.produtoService.criar(this.produto).subscribe(()=>{
 this.router.navigate(['produtos'])
 this.mensagemService.add("Produto Cadastrado com Sucesso")

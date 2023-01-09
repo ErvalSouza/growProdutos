@@ -23,7 +23,7 @@
 
           <td>{{produto.nome}}</td>
           <td>{{produto.preco}}</td>
-          <td>{{produto.dataValidade}}</td>
+          <td >{{produto.dia}}/{{produto.mes}}/{{produto.ano}}</td>
           <td>{{produto.quantidade}}</td>
           <td>
             <a class="btn btn-primary butao" routerLink="/produtos/editar/{{produto.id}}">Editar</a>
@@ -34,6 +34,12 @@
       </tbody>
     </table>
   </div>
+
+<div *ngFor="let produto of produtos">
+<div *ngIf="produto.ano < ano">
+<p>O produto {{produto.nome}} está vencido! Exclua do seu estoque  <a class="btn btn-danger" routerLink="/produtos/excluir/{{produto.id}}" >Excluir Vencido</a></p>
+</div>
+</div>
 
   <ng-template #naoProdutos>
     <div class="container mt-5" >

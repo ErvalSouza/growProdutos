@@ -22,6 +22,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { LoginComponent } from './components/login/login.component';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

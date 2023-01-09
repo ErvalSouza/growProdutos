@@ -31,17 +31,17 @@ this.produtoService.getById(id!).subscribe((produto)=>{
 })
   }
 
-  atualizarProduto(): void{
-if(this.produto.dataValidade.length < 10){
-  this.mensagemService.add(`Preencha o campo de validade corretamente ex: ${this.dia}/${this.mes}/${this.ano}`)
-  return;
-}
+//   atualizarProduto(): void{
+// if(this.produto.dataValidade.length < 10){
+//   this.mensagemService.add(`Preencha o campo de validade corretamente ex: ${this.dia}/${this.mes}/${this.ano}`)
+//   return;
+// }
 
-this.produtoService.atualizar(this.produto).subscribe(()=>{
-this.mensagemService.add("Produto Atualizado com Sucesso")
-this.router.navigate(['produtos'])
-})
-  }
+// this.produtoService.atualizar(this.produto).subscribe(()=>{
+// this.mensagemService.add("Produto Atualizado com Sucesso")
+// this.router.navigate(['produtos'])
+// })
+//   }
 
   cancelar(){
     this.router.navigate(['produtos'])
